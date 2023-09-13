@@ -26,12 +26,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FormidableLabs/react-native-app-auth.git"
+    "url": "git+https://github.com/ChipIndicator/react-native-app-auth.git"
   },
   "bugs": {
-    "url": "https://github.com/FormidableLabs/react-native-app-auth/issues"
+    "url": "https://github.com/ChipIndicator/react-native-app-auth/issues"
   },
-  "homepage": "https://github.com/FormidableLabs/react-native-app-auth",
+  "homepage": "https://github.com/ChipIndicator/react-native-app-auth/",
   "keywords": [
     "react",
     "react-native",
@@ -41,7 +41,7 @@
     "oauth2",
     "appauth"
   ],
-  "author": "kadi.kraman@formidable.com",
+  "author": "@ChipIndicator",
   "license": "MIT",
   "peerDependencies": {
     "react-native": ">=0.63.0"
