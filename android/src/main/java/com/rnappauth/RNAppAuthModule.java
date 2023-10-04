@@ -497,10 +497,8 @@ public class RNAppAuthModule extends ReactContextBaseJavaModule implements Activ
             Boolean skipCodeExchange = sharedPref.getBoolean("skipCodeExchange", false);
 
             if (skipCodeExchange) {
-
                 String codeVerifier = sharedPref.getString("codeVerifier", null);
                 Boolean usePKCE = sharedPref.getBoolean("usePKCE", true);
-
                 WritableMap map;
                 if (usePKCE && codeVerifier != null) {
                     map = TokenResponseFactory.authorizationCodeResponseToMap(response, codeVerifier);
