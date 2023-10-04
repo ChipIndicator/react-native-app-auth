@@ -248,7 +248,7 @@ public class RNAppAuthModule extends ReactContextBaseJavaModule implements Activ
         editor.putBoolean("skipCodeExchange", skipCodeExchange);
         editor.putBoolean("usePKCE", usePKCE);
         editor.putString("clientSecret", clientSecret);
-        editor.apply();
+        editor.commit();
 
         // when serviceConfiguration is provided, we don't need to hit up the OpenID well-known id endpoint
         if (serviceConfiguration != null || hasServiceConfiguration(issuer)) {
@@ -339,7 +339,7 @@ public class RNAppAuthModule extends ReactContextBaseJavaModule implements Activ
         SharedPreferences sharedPref = getCurrentActivity().getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putBoolean("dangerouslyAllowInsecureHttpRequests", dangerouslyAllowInsecureHttpRequests);
-        editor.apply();
+        editor.commit();
 
         // store setting in private field for later use in onActivityResult handler
         this.additionalParametersMap = additionalParametersMap;
@@ -558,7 +558,7 @@ public class RNAppAuthModule extends ReactContextBaseJavaModule implements Activ
             editor.remove("skipCodeExchange");
             editor.remove("usePKCE");
             editor.remove("codeVerifier");
-            editor.apply();
+            editor.commit();
         }
 
         if (requestCode == 53) {
@@ -704,7 +704,7 @@ public class RNAppAuthModule extends ReactContextBaseJavaModule implements Activ
             SharedPreferences sharedPref = getCurrentActivity().getPreferences(Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putString("codeVerifier", codeVerifier);
-            editor.apply();
+            editor.commit();
             authRequestBuilder.setCodeVerifier(codeVerifier);
         }
 
@@ -793,7 +793,7 @@ public class RNAppAuthModule extends ReactContextBaseJavaModule implements Activ
         SharedPreferences sharedPref = getCurrentActivity().getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.remove("dangerouslyAllowInsecureHttpRequests");
-        editor.apply();
+        editor.commit();
     }
 
     /*
