@@ -493,7 +493,7 @@ public class RNAppAuthModule extends ReactContextBaseJavaModule implements Activ
                 return;
             }
 
-            SharedPreferences sharedPref = getCurrentActivity().getPreferences(Context.MODE_PRIVATE);
+            SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
             Boolean skipCodeExchange = sharedPref.getBoolean("skipCodeExchange", false);
 
             if (skipCodeExchange) {
